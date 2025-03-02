@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+
+
+
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slideDown {
+    animation: slideDown 0.2s ease-out;
+  }
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(6deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(6deg);
+    }
+  }
+  /* Add this to your existing CSS */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+  @keyframes float-delayed {
+    0%, 100% {
+      transform: translateY(0) rotate(-6deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(-6deg);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float-delayed 6s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  
+  .bg-grid-slate-100 {
+    background-image: linear-gradient(to right, rgb(241 245 249 / 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(241 245 249 / 0.1) 1px, transparent 1px);
+  }
+
+html,body{
+    font-family: "Exo 2", serif;
+    overflow-x: hidden;
+}
+.subheading-banner{
+    font-family: "DM Serif Text", serif;
+}
+
+#navbar a{
+    margin-left: 0px;
+    padding: 10px;
+}
+.main-container{
+    width: 100%;
+}
+.child-container{
+    border:1px soldi ;
+    max-width: 1560px;
+    margin: 0 auto;
+}
+
+.swiper{
+  width: 100%;
+}
+
+
+
+@keyframes floatNuts {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@layer utilities {
+  .animate-float-nuts {
+    animation: floatNuts 3s infinite;
+  }
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
